@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'; // Import useEffect and useState
+import React, { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
 function UserDashboard() {
@@ -6,10 +6,11 @@ function UserDashboard() {
     const [error, setError] = useState(null); // Define state for error
     const loggedInUser = localStorage.getItem('loggedInUser');
 
+    // Redirect to login page if no user is logged in
     useEffect(() => {
-      if (!loggedInUser) {
-        navigate('/login');
-      }
+        if (!loggedInUser) {
+            navigate('/login');
+        }
     }, [loggedInUser, navigate]);
 
     const handleLogout = () => {
@@ -20,25 +21,34 @@ function UserDashboard() {
 
     return (
         <div className="container mt-5">
-            <h2 className="text-center mb-4">Welcome, {loggedInUser}</h2>
-
-            {/* Display error if it exists */}
-            {error && <div className="alert alert-danger">{error}</div>}
-
-            {/* Logout Button */}
-            <div className="d-flex justify-content-center mb-4">
-                <button className="btn btn-primary btn-lg" onClick={handleLogout}>
-                    Logout
-                </button>
+            <div className="text-center mb-4">
+                <h4 className="display-4 ">Welcome Back, {loggedInUser}!</h4>
+                <p className="lead text-muted">Manage your account and explore our features.</p>
             </div>
 
-            {/* Link to Create Recipe Page */}
-            <div className="d-flex justify-content-center">
-                <Link to="/create-recipe">
-                    <button className="btn btn-success btn-lg">
+            {/* Display error if it exists */}
+            {error && (
+                <div className="alert alert-danger text-center">
+                    <strong>Error:</strong> {error}
+                </div>
+            )}
+
+            {/* Action Buttons */}
+            <div className="d-flex flex-column align-items-center gap-3">
+
+            <Link to="/create-recipe">
+                    <button className="btn btn-success btn-lg px-5 py-3 fw-bold">
                         Create a Recipe
                     </button>
-                </Link>
+            </Link>
+                <button
+                    className="btn btn-danger btn-lg px-5 py-3 fw-bold"
+                    onClick={handleLogout}
+                >
+                    Logout
+                </button>
+
+                
             </div>
         </div>
     );

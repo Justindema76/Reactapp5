@@ -1,6 +1,8 @@
-# ReactApp3
-React Assignment#3 &
-React Assignment#4
+# ReactApp5
+
+- React Assignment#5
+>Login and Register functionality added
+
 
 ### RECIPE DATABASE
 
@@ -11,11 +13,11 @@ The Recipe Blog App is a simple web application where users can view, create, an
 
 ## Features
 
-- **View Recipes**: Users can see a list of all the recipes with their titles, ingredients, and instructions.
+- **View Recipes**: Guests can see a list of all the recipes with titles, ingredients, and instructions.
+- **Register/Login**: Users need to register and login in order to submit their own recipes by filling out a form with the recipe name, ingredients, and instructions.
 - **Create Recipes**: Users can submit their own recipes by filling out a form with the recipe name, ingredients, and instructions.
-- **Like and Dislike Recipes**: Users can interact with the recipes by liking or disliking them. The number of likes and dislikes will be updated in real time.
 - **Responsive Design**: The app is fully responsive and works on various screen sizes, from desktop to mobile devices.
-- **IP Tracking**: User interaction is tracked using their IP address to prevent multiple votes from the same person.
+
 
 ## Tech Stack
 
