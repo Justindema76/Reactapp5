@@ -34,10 +34,4 @@ Make sure you have the following installed:
 - [MySQL](https://www.mysql.com/)
 - A local or remote PHP server (e.g., XAMPP, LAMP, etc.)
 
-### Frontend Setup
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/recipe-blog-app.git
-   cd recipe-blog-app
 
