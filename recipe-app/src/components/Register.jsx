@@ -67,7 +67,7 @@ function Register() {
 
     return (
         <div className="container mt-5">
-            <h2 className="text-center mb-4 text-danger">Create an Account</h2>
+            <h2 className="text-center mb-4 text-danger">Register</h2>
 
             {error && <div className="alert alert-success">{error}</div>}
             {success && (

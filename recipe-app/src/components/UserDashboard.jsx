@@ -15,7 +15,7 @@ function UserDashboard() {
     const handleLogout = () => {
         // Remove the user from localStorage when logging out
         localStorage.removeItem('loggedInUser');
-        navigate('/login');
+        navigate('/');
     };
 
     return (

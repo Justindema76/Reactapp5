@@ -21,7 +21,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light"> {/* Light background */}
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">Recipe Database</Link>
+        <Link className="navbar-brand" to="/">Recipe Manager</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -32,7 +32,7 @@ function Navbar() {
                 <li className="nav-item">
                   <span className="nav-link text-dark">Welcome, {loggedInUser}</span> {/* Dark text color */}
                 </li>
-                {location.pathname !== '/login' && (
+                {location.pathname === '/' && (
                   <li className="nav-item">
                     <button className="btn btn-outline-dark" onClick={handleLogout}>Logout</button> {/* Dark button outline */}
                   </li>

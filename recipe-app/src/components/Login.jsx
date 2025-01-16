@@ -64,7 +64,7 @@ function Login() {
 
     return (
         <div className="container mt-5">
-            <h2 className="text-center mb-4">Login</h2>
+            <h2 className="text-center text-danger mb-4">Login</h2>
 
             {error && <div className="alert alert-danger">{error}</div>}
             {success && <div className="alert alert-success">{success}</div>}
@@ -95,7 +95,7 @@ function Login() {
                 </div>
 
                 <div className="d-flex justify-content-center">
-                    <button type="submit" className="btn btn-primary btn-lg" disabled={isLoading}>
+                    <button type="submit" className="btn btn-danger btn-lg" disabled={isLoading}>
                         {isLoading ? 'Logging in...' : 'Login'}
                     </button>
                 </div>
